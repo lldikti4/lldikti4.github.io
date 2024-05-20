@@ -1,0 +1,51 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #00ADEF;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header img {
+    width: 100px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.zone {
+    border: 2px dashed #000;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+}
+
+.red {
+    border-color: red;
+    background-color: #FFCCCC;
+}
+
+.yellow {
+    border-color: yellow;
+    background-color: #FFFF99;
+}
+
+.green {
+    border-color: green;
+    background-color: #CCFFCC;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
