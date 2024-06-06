@@ -3,81 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Klasterisasi Perguruan Tinggi Berdasarkan SPMI</title>
+    <title>Dashboard SPMI</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        .header {
-            background-color: #007BFF;
-            color: white;
-            padding: 20px 40px;
-            display: flex;
-            align-items: center;
-        }
-        .header img {
-            height: 50px;
-            margin-right: 20px;
-        }
-        .zones-container {
-            display: flex;
-            justify-content: space-evenly;
-            padding: 20px 0;
-        }
-        .zone {
-            width: 30%;
-            padding: 10px;
-            box-sizing: border-box;
-            text-align: center;
-            position: relative;
-        }
-        .zone:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border: 2px dashed #ccc;
-            pointer-events: none;
-        }
-        .red:before {
-            border-color: red;
-        }
-        .yellow:before {
-            border-color: yellow;
-        }
-        .green:before {
-            border-color: green;
-        }
-        .zone button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
+        body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.header {
+    background-color: #0056b3; /* Warna biru gelap */
+    color: white;
+    padding: 10px 20px; /* Pengaturan padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 60px; /* Ukuran logo dikecilkan */
+    height: auto; /* Menjaga proporsi gambar */
+}
+
+.navbar button {
+    background-color: #007bff; /* Warna biru terang */
+    color: white;
+    border: none;
+    padding: 10px 15px; /* Ukuran padding disesuaikan */
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px; /* Tambahkan border-radius */
+    font-size: 16px; /* Ukuran font disesuaikan */
+}
+
+.navbar button:hover {
+    background-color: #0062cc; /* Warna saat hover diubah */
+}
+
+.main-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.team-illustration img {
+    width: 80%; /* Atur lebar gambar */
+    margin-top: 20px;
+    height: auto; /* Menjaga proporsi gambar */
+}
+
     </style>
 </head>
 <body>
     <div class="header">
-        <img src="logo-lldikti.png" alt="LLDIKTI Logo">
-        <div>KLASTERISASI PERGURUAN TINGGI BERDASARKAN SPMI</div>
+        <img src="logo-lldikti.png" alt="LLDIKTI Logo" class="logo">
+        <div class="navbar">
+            <button>SPMI</button>
+            <button>FasWil</button>
+            <button>Klusterisasi</button>
+            <button>Klinik SPMI</button>
+        </div>
     </div>
-    <div class="zones-container">
-        <div class="zone red">
-            <div>Zona Merah</div>
-            <button onclick="alert('Detail zona merah')">Lihat detail</button>
-        </div>
-        <div class="zone yellow">
-            <div>Zona Kuning</div>
-            <button onclick="alert('Detail zona kuning')">Lihat detail</button>
-        </div>
-        <div class="zone green">
-            <div>Zona Hijau</div>
-            <button onclick="alert('Detail zona hijau')">Lihat detail</button>
+    <div class="main-content">
+        <h1>DASHBOARD SPMI</h1>
+        <p>Dashboard berisi tentang Report SPMI, termasuk pembagian fasilitator wilayah, klasterisasi, dan pengadaan klinik SPMI bagi perguruan tinggi</p>
+        <div class="team-illustration">
+            <img src="team.jpeg" alt="Team Working">
         </div>
     </div>
 </body>
