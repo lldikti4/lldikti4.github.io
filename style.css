@@ -92,3 +92,63 @@ body, html {
     margin-top: 20px;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: linear-gradient(to bottom, lightblue, white); /* Gradient background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff; /* White background for the header */
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+#logo {
+    height: 50px; /* Adjust size as necessary */
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px; /* Spacing between nav items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007BFF; /* Blue text for a lighter feel */
+    font-size: 16px;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover, .tablink.active {
+    background-color: #007BFF; /* Highlight on hover */
+    color: white;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+

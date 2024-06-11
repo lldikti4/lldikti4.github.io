@@ -6,14 +6,15 @@
     <title>Dashboard SPMI</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        body, html {
+        html, body {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
+    height: 100%;
+    background: linear-gradient(to bottom, lightblue, white); /* Ensures gradient fills the whole screen */
 }
 
 .header {
-    background-color: #0056b3; /* Warna biru gelap */
+    background-color:linear-gradient(to bottom, lightblue, white); /* Ensures gradient fills the whole screen */
     color: white;
     padding: 10px 20px; /* Pengaturan padding */
     display: flex;
@@ -57,18 +58,23 @@
 <body>
     <div class="header">
         <img src="logo-lldikti.png" alt="LLDIKTI Logo" class="logo">
-        <div class="navbar">
-            <button>SPMI</button>
-            <button>FasWil</button>
-            <button onclick="goToPage()">Klusterisasi</button>
-            <button>Klinik SPMI</button>
-        </div>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">SPMI</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">FasWil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="klaster.html">Klusterisasi</a>
+            </li>
+          </ul>
     </div>
     <div class="main-content">
         <h1>DASHBOARD SPMI</h1>
         <p>Dashboard berisi tentang Report SPMI, termasuk pembagian fasilitator wilayah, klasterisasi, dan pengadaan klinik SPMI bagi perguruan tinggi</p>
         <div class="team-illustration">
-            <img src="team.jpeg" alt="Team Working">
+            <!-- <img src="team.jpeg" alt="Team Working"> -->
         </div>
     </div>
 
