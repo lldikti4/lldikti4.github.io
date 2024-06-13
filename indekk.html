@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard SPMI</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: linear-gradient(to bottom, lightblue, white); /* Ensures gradient fills the whole screen */
+}
+
+.header {
+    background-color:linear-gradient(to bottom, lightblue, white); /* Ensures gradient fills the whole screen */
+    color: white;
+    padding: 10px 20px; /* Pengaturan padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 60px; /* Ukuran logo dikecilkan */
+    height: auto; /* Menjaga proporsi gambar */
+}
+
+.navbar button {
+    background-color: #007bff; /* Warna biru terang */
+    color: white;
+    border: none;
+    padding: 10px 15px; /* Ukuran padding disesuaikan */
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px; /* Tambahkan border-radius */
+    font-size: 16px; /* Ukuran font disesuaikan */
+}
+
+.navbar button:hover {
+    background-color: #0062cc; /* Warna saat hover diubah */
+}
+
+.main-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.team-illustration img {
+    width: 80%; /* Atur lebar gambar */
+    margin-top: 20px;
+    height: auto; /* Menjaga proporsi gambar */
+}
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="logo-lldikti.png" alt="LLDIKTI Logo" class="logo">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">SPMI</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">FasWil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="klaster.html">Klusterisasi</a>
+            </li>
+          </ul>
+    </div>
+    <div class="main-content">
+        <h1>DASHBOARD SPMI</h1>
+        <p>Dashboard berisi tentang Report SPMI, termasuk pembagian fasilitator wilayah, klasterisasi, dan pengadaan klinik SPMI bagi perguruan tinggi</p>
+        <div class="team-illustration">
+            <!-- <img src="team.jpeg" alt="Team Working"> -->
+        </div>
+    </div>
+
+    <script>
+        function goToPage() {
+            // Ganti "targetPage.html" dengan URL halaman yang ingin Anda tuju
+            window.location.href = "klaster.html";
+        }
+        </script>
+</body>
+</html>
