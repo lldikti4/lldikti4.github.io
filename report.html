@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report SPMI</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 50px;
+            background-color: #f2f2f2;
+        }
+        .header img {
+            height: 50px;
+        }
+        .content-container {
+            margin-top: 20px; /* Space from header to content */
+            background-color: #b3e5fc; /* Light blue background */
+            padding: 20px; /* Padding around the content */
+            border-radius: 5px; /* Rounded corners for the container */
+        }
+        .card-header {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        .card {
+            margin-top: 20px; /* Additional spacing for each card inside the container */
+        }
+        .pie-chart {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+            <img src="logo-lldikti.png" alt="LLDIKTI Logo">
+        </a>
+        <div><strong>REPORT SPMI</strong></div>
+    </div>
+    <div class="container-fluid">
+        <div class="content-container"> <!-- Wrapper for all content with background -->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <canvas id="uploadChart"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <canvas id="validationChart"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <canvas id="verificationChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-3">
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Kode</th>
+                                <th>PT</th>
+                                <th>Faswil</th>
+                                <th>Verifikasi</th>
+                                <th>Validasi</th>
+                                <th>Unggah</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>null</td>
+                                <td>Universitas Bhakti Asih Tangerang</td>
+                                <td>Nanah Sujanah</td>
+                                <td>0%</td>
+                                <td>0%</td>
+                                <td>0%</td>
+                            </tr>
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const uploadCtx = document.getElementById('uploadChart').getContext('2d');
+        const validationCtx = document.getElementById('validationChart').getContext('2d');
+        const verificationCtx = document.getElementById('verificationChart').getContext('2d');
+
+        const uploadData = {
+            labels: ['Tidak Lengkap', 'Tidak Ada', 'Sudah Unggah'],
+            datasets: [{
+                label: 'Unggah',
+                data: [50.1, 49.9, 0],
+                backgroundColor: ['#007bff', '#dc3545', '#28a745'],
+            }]
+        };
+
+        const validationData = {
+            labels: ['Belum Tervalidasi', 'Tidak Ada', 'Sudah Tervalidasi'],
+            datasets: [{
+                label: 'Validasi',
+                data: [21.6, 78.4, 0],
+                backgroundColor: ['#ffc107', '#17a2b8', '#28a745'],
+            }]
+        };
+
+        const verificationData = {
+            labels: ['Belum Terverifikasi', 'Tidak Ada', 'Sudah Terverifikasi'],
+            datasets: [{
+                label: 'Verifikasi',
+                data: [18.1, 81.9, 0],
+                backgroundColor: ['#6c757d', '#343a40', '#ffc107'],
+            }]
+        };
+
+        new Chart(uploadCtx, {
+            type: 'doughnut',
+            data: uploadData,
+        });
+
+        new Chart(validationCtx, {
+            type: 'doughnut',
+            data: validationData,
+        });
+
+        new Chart(verificationCtx, {
+            type: 'doughnut',
+            data: verificationData,
+        });
+    </script>
+</body>
+</html>
