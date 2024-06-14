@@ -3,82 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Klasterisasi Perguruan Tinggi  SPMI</title>
+    <title>Clustering of Universities Based on SPMI</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
         .header {
-            background-color: #007BFF;
-            color: white;
-            padding: 20px 40px;
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            padding: 10px 50px;
+            background-color: #f2f2f2;
         }
         .header img {
             height: 50px;
-            margin-right: 20px;
         }
-        .zones-container {
-            display: flex;
-            justify-content: space-evenly;
-            padding: 20px 0;
-        }
-        .zone {
-            width: 30%;
-            padding: 10px;
-            box-sizing: border-box;
-            text-align: center;
-            position: relative;
-        }
-        .zone:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border: 2px dashed #ccc;
-            pointer-events: none;
-        }
-        .red:before {
-            border-color: red;
-        }
-        .yellow:before {
-            border-color: yellow;
-        }
-        .green:before {
-            border-color: green;
-        }
-        .zone button {
+        .cluster-box {
             margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
+        }
+        .cluster-container {
+            background-color: #b3e5fc; /* Light blue background */
+            padding: 20px;
+            border-radius: 8px;
+            display: flex; /* Ensure the zones align horizontally */
+        }
+        .university-list {
+            height: 300px; /* Set a fixed height or make it dynamic based on content */
+            overflow-y: auto; /* Allows scrolling */
+        }
+        .card-header {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .card {
+            margin-bottom: 20px; /* Space between cards when stacked */
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <img src="logo-lldikti.png" alt="LLDIKTI Logo">
-        <div>KLASTERISASI PERGURUAN TINGGI BERDASARKAN SPMI</div>
+        <!-- Wrap the logo in an anchor tag pointing to index.html -->
+        <a href="index.html">
+            <img src="logo-lldikti.png" alt="LLDIKTI Logo">
+        </a>
+        <div><strong>KLASTERISASI PERGURUAN TINGGI BERDASARKAN SPMI</strong></div>
     </div>
-    <div class="zones-container">
-        <div class="zone red">
-            <div>Zona Merah</div>
-            <button onclick="alert('Detail zona merah')">Lihat detail</button>
-        </div>
-        <div class="zone yellow">
-            <div>Zona Kuning</div>
-            <button onclick="alert('Detail zona kuning')">Lihat detail</button>
-        </div>
-        <div class="zone green">
-            <div>Zona Hijau</div>
-            <button onclick="alert('Detail zona hijau')">Lihat detail</button>
+    <div class="container">
+        <div class="row cluster-box">
+            <div class="cluster-container col-12"> <!-- Container for the three zones -->
+                <!-- Zona Merah -->
+                <div class="col-md-4">
+                    <div class="card text-white bg-danger">
+                        <div class="card-header">Zona Merah - Record Count: 223</div>
+                        <div class="card-body">
+                            <ul class="list-unstyled university-list">
+                                <!-- Dynamically generate list items here -->
+                                <li>Universitas Yarsi Pratama</li>
+                                <li>Universitas Tangerang Raya</li>
+                                <li>Universitas Suryakancana</li>
+                                <!-- Add more as needed -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Zona Kuning -->
+                <div class="col-md-4">
+                    <div class="card text-dark bg-warning">
+                        <div class="card-header">Zona Kuning - Record Count: 130</div>
+                        <div class="card-body">
+                            <ul class="list-unstyled university-list">
+                                <!-- Dynamically generate list items here -->
+                                <li>Universitas Yayasan Pendidikan Imam Bonjol Majalengka</li>
+                                <li>Universitas Yatis Madani</li>
+                                <li>Universitas Widyatama</li>
+                                <!-- Add more as needed -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Zona Hijau -->
+                <div class="col-md-4">
+                    <div class="card text-white bg-success">
+                        <div class="card-header">Zona Hijau - Record Count: 86</div>
+                        <div class="card-body">
+                            <ul class="list-unstyled university-list">
+                                <!-- Dynamically generate list items here -->
+                                <li>Universitas Yupentek Indonesia</li>
+                                <li>Universitas Wiralodra</li>
+                                <li>Universitas Winaya Mukti</li>
+                                <!-- Add more as needed -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
