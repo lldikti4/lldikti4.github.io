@@ -1,0 +1,19 @@
+
+{
+  "name": "lldikti4.github.io",
+  "version": "1.0.0",
+  "description": "Implementasi Kluster SPMI",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.50.0",
+    "webpack-cli": "^4.7.2",
+    "py-loader": "^1.0.0"
+  }
+}
