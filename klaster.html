@@ -11,7 +11,7 @@
             align-items: center;
             justify-content: space-between;
             padding: 10px 50px;
-            background: linear-gradient(to bottom, lightblue, white); /* Ensures gradient fills the whole screen */
+            background: linear-gradient(to bottom, lightblue, white);
         }
         .header img {
             height: 50px;
@@ -20,27 +20,23 @@
             margin-top: 20px;
         }
         .cluster-container {
-            background-color: #b3e5fc; /* Light blue background */
+            background-color: #b3e5fc;
             padding: 20px;
             border-radius: 8px;
-            display: flex; /* Ensure the zones align horizontally */
+            margin-bottom: 20px;
         }
         .university-list {
-            height: 300px; /* Set a fixed height or make it dynamic based on content */
-            overflow-y: auto; /* Allows scrolling */
+            height: 300px;
+            overflow-y: auto;
         }
         .card-header {
             font-size: 18px;
             font-weight: bold;
         }
-        .card {
-            margin-bottom: 20px; /* Space between cards when stacked */
-        }
     </style>
 </head>
 <body>
-    <div class="header" >
-        <!-- Wrap the logo in an anchor tag pointing to index.html -->
+    <div class="header">
         <a href="index.html">
             <img src="logo-lldikti.png" alt="LLDIKTI Logo">
         </a>
@@ -48,17 +44,17 @@
     </div>
     <div class="container">
         <div class="row cluster-box">
-            <div class="cluster-container col-12"> <!-- Container for the three zones -->
-                <h3>K-Means Clustering Result</h1>
+            <div class="col-12 cluster-container">
+                <h3>K-Means Clustering Result</h3>
                 <img src="K-Means Clustering.png" alt="K-Means Clustering">
             </div>
-            <div class="cluster-container col-12"> <!-- Container for the three zones -->
-                <h3>Mean Shift Clustering Result</h1>
-                <img src="Mean-shift.png" alt="K-Means Clustering">
+            <div class="col-12 cluster-container">
+                <h3>Mean Shift Clustering Result</h3>
+                <img src="Mean-shift.png" alt="Mean Shift Clustering">
             </div>
-            <div class="cluster-container col-12"> <!-- Container for the three zones -->
-                <h3>DBSCAN Shift Clustering Result</h1>
-                <img src="dbscan.png" alt="K-Means Clustering">
+            <div class="col-12 cluster-container">
+                <h3>DBSCAN Clustering Result</h3>
+                <img src="dbscan.png" alt="DBSCAN Clustering">
             </div>
         </div>
     </div>
